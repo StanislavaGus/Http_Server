@@ -62,6 +62,16 @@ Create and send http response back
     HTTP/1.1 201 Created
     Content-Length: 0
     Content-Type: text/plain
+
+
+# Description
+
+The Main class initializes custom endpoints and starts the server on port 8081 in a separate thread. 
+
+After the server starts, it waits for requests from clients. After the client has contacted the server, it establishes a connection with it and processes its requests. The project implements one custom endpoint - person, its handler can be found in the Main class. After the server has accepted the request, it processes it in the HttpRequest class and sends the data to the HttpResponse class in which the response is sent to the client. 
+
+You can see examples of requests and responses above.
+
       
 
   
