@@ -37,7 +37,32 @@ Create and send http response back
 # Test curl request
 
   ## for Windows:
+
+  # curl "http://localhost:8081" -D -
   
+    HTTP/1.1 200 OK
+    Content-Length: 74
+    Content-Type: text/plain
+    
+    Your headers are:
+    Accept: */*
+    User-Agent:     curl/8.4.0
+    Host:   localhost:8081
+
+# curl "http://localhost:8081/person" -D -
+
+    HTTP/1.1 400 Bad Request
+    Content-Length: 41
+    Content-Type: text/plain
+    
+    Invalid request: Missing 'name' parameter
+
+# curl -X PUT  --data-raw "Filip's Data" "http://localhost:8081/person?name=Filip" -D -
+
+    HTTP/1.1 201 Created
+    Content-Length: 0
+    Content-Type: text/plain
+      
 
   
 
